@@ -1,0 +1,286 @@
+.master {
+  overflow: hidden;
+
+  //侧边栏
+  .sidebar {
+    position: relative;
+    float: left;
+    width: 381px;
+    border-right: 1px solid #cacaca;
+    z-index: 9;
+
+    //侧边栏动画箭头
+    .pull {
+      position: absolute;
+      top: 40%;
+      right: -19px;
+      width: 19px;
+      height: 63px;
+      background: url("../imgs/1.png") 0 -1px;
+      cursor: pointer;
+      div {
+        display: none;
+        margin: 2px 0 0 1px;
+        width: 12px;
+        height: 59px;
+        background-color: #edf1f5;
+      }
+      span {
+        position: absolute;
+        top: 29px;
+        left: 5px;
+        width: 4px;
+        height: 7px;
+        background: url("../imgs/1.png") -46px -53px;
+      }
+    }
+    .pull:hover > div {
+      display: block;
+    }
+
+    //路由tab栏
+    .router {
+      position: relative;
+      width: 381px;
+      height: 33px;
+      background-color: #f4f7f8;
+      border-bottom: 1px solid #dde1e5;
+      border-right: 1px solid #dde1e5;
+      li {
+        margin-top: 3px;
+        float: left;
+        a {
+          display: inline-block;
+          width: 93px;
+          height: 29px;
+          line-height: 29px;
+          text-align: center;
+          color: #6f7070;
+          font-size: 14px;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #6f7070;
+          text-decoration: none;
+        }
+      }
+      .cut {
+        margin-top: 8px;
+        width: 1px;
+        height: 15px;
+        background: url("../imgs/2.png") -116px -80px;
+      }
+
+      //路由点击时特效
+      .under {
+        position: relative;
+        a {
+          color: #1e8ae5;
+          font-weight: 700;
+        }
+        a:hover {
+          color: #1e8ae5;
+          font-weight: 700;
+        }
+        span {
+          position: absolute;
+          top: 28px;
+          left: 15px;
+          width: 65px;
+          height: 3px;
+          background-color: #1e8ae5;
+        }
+      }
+    }
+
+    //路由页面
+    .render {
+      position: relative;
+    }
+  }
+
+  //地图组件
+  .geo {
+    position: relative;
+    overflow: hidden;
+
+    //工具条
+    .bar {
+      position: absolute;
+      width: 100%;
+      height: 33px;
+      line-height: 33px;
+      background: url("../imgs/2.png") 0 -42px;
+      z-index: 1;
+
+      //城市选择
+      .ctr {
+        position: absolute;
+        left: 4px;
+        cursor: pointer;
+        .box {
+          margin-top: -1px;
+          .city {
+            width: 55px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+
+      //地图切换
+      .over {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        width: 125px;
+        height: 22px;
+        color: #868686;
+        border: 1px solid #bdcbd3;
+        background-color: #f8fafa;
+        cursor: pointer;
+        div {
+          float: left;
+          width: 41px;
+          height: 20px;
+          line-height: 20px;
+          border-left: 1px solid #bdcbd3;
+          text-align: center;
+        }
+        .default {
+          border-left: 0;
+        }
+        .weight {
+          color: #000;
+          font-weight: 700;
+          background-color: #e6edf1;
+        }
+      }
+
+      //测距标记
+      .tool {
+        position: absolute;
+        right: 150px;
+        height: 22px;
+        div {
+          float: left;
+          margin: 2px 5px;
+          width: 32px;
+          height: 28px;
+          cursor: pointer;
+        }
+        div:hover {
+          background: url("../imgs/2.png") -69px -80px;
+          span {
+            background-position-y: -134px;
+          }
+        }
+        .clear {
+          span {
+            display: block;
+            margin: 6px 5px;
+            width: 20px;
+            height: 18px;
+            background: url("../imgs/2.png") -21px -115px;
+          }
+        }
+        .ranging {
+          span {
+            display: block;
+            margin: 8px 5px;
+            width: 20px;
+            height: 12px;
+            background: url("../imgs/2.png") 0 -115px;
+          }
+        }
+        .peg {
+          span {
+            display: block;
+            margin: 6px 10px;
+            width: 10px;
+            height: 17px;
+            background: url("../imgs/2.png") -44px -115px;
+          }
+        }
+      }
+    }
+
+    //路况
+    .road {
+      position: absolute;
+      top: 65px;
+      right: 20px;
+      width: 59px;
+      height: 65px;
+      background: url("../imgs/map.png") -3px -71px;
+      cursor: pointer;
+      div {
+        display: none;
+        position: absolute;
+        top: 13px;
+        right: 18px;
+        width: 24px;
+        height: 23px;
+        background: url("../imgs/map.png") -85px -102px;
+      }
+    }
+    .road:hover {
+      background-position-y: -3px;
+    }
+
+    //地图定位
+    .location{
+      position: absolute;
+      top: 245px;
+      right: 30px;
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+      font-size: 25px;
+      color: #0091ff;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 8px #888;
+      cursor: pointer;
+    }
+
+    //地图缩放
+    .zoom {
+      position: absolute;
+      top: 145px;
+      right: 25px;
+      width: 48px;
+      height: 96px;
+      background: url("../imgs/map.png") -65px -2px;
+      div {
+        position: relative;
+        margin: 6px 0 0 5px;
+        width: 38px;
+        height: 40px;
+        cursor: pointer;
+        span {
+          position: absolute;
+          top: 12px;
+          left: 11px;
+          width: 17px;
+          height: 16px;
+          background: url("../imgs/map.png") -66px -101px;
+        }
+      }
+      div:hover {
+        background-color: #ebf1f3;
+      }
+      .min {
+        span {
+          top: 19px;
+          height: 4px;
+          background-position-y: -124px;
+        }
+      }
+    }
+  }
+}

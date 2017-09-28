@@ -1,0 +1,554 @@
+//search
+.search {
+  height: 58px;
+  background-color: #f4f7f8;
+  border-bottom: 1px solid #dde1e5;
+  .join {
+    position: relative;
+    width: 370px;
+    top: 13px;
+    left: 12px;
+    .cue {
+      position: absolute;
+      top: 8px;
+      left: 9px;
+      color: #ccc;
+      cursor: text;
+    }
+    .enter {
+      padding-left: 9px;
+      width: 271px;
+      height: 28px;
+      color: #393939;
+      border: 1px solid #d6d6d6;
+    }
+    .put {
+      margin-left: 3px;
+      width: 62px;
+      height: 30px;
+      color: #fff;
+      background: url("../imgs/2.png") 0 -79px;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+  .prompt {
+    display: none;
+    position: absolute;
+    top: 41px;
+    left: 12px;
+    width: 271px;
+    border: 1px solid #d6d6d6;
+    background-color: #fff;
+    z-index: 1;
+    div {
+      padding-left: 12px;
+      height: 32px;
+      line-height: 32px;
+      cursor: pointer;
+    }
+    div:hover {
+      background-color: #d6d6d6;
+    }
+  }
+}
+
+//bus、driving
+.menu {
+  padding: 13px 0 8px 0;
+  background-color: #f4f7f8;
+  border-bottom: 1px solid #DDE1E5;
+  .inquiry {
+    position: relative;
+    left: 12px;
+    width: 356px;
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    font-size: 14px;
+    span {
+      margin-left: 12px;
+      line-height: 33px;
+      color: #6c6c6c;
+      font-weight: 700;
+    }
+    label {
+      position: absolute;
+      top: 8px;
+      left: 52px;
+      color: #ccc;
+      cursor: text;
+    }
+    input {
+      padding-left: 9px;
+      width: 251px;
+      height: 33px;
+      color: #393939;
+      border: 0;
+      font-size: 14px;
+      outline: none;
+    }
+    .from {
+      position: relative;
+      input {
+        border-bottom: 1px dashed #d6d6d6;
+      }
+      .add {
+        position: absolute;
+        top: 5px;
+        right: 62px;
+        width: 24px;
+        height: 24px;
+        background: url("../imgs/1.png") -44px -1px;
+        cursor: pointer;
+      }
+    }
+    .to {
+      position: relative;
+    }
+    .exchange {
+      position: absolute;
+      margin-top: -20px;
+      top: 50%;
+      right: 12px;
+      width: 36px;
+      height: 41px;
+      background: url("../imgs/2.png") -77px -111px;
+      cursor: pointer;
+    }
+
+    //途经
+    .mid {
+      position: relative;
+      input {
+        margin-left: 8px;
+        border-bottom: 1px dashed #d6d6d6;
+      }
+      .addsub {
+        position: absolute;
+        top: 5px;
+        right: 62px;
+        width: 24px;
+        height: 24px;
+        background: url("../imgs/1.png") -43px -26px;
+        cursor: pointer;
+      }
+    }
+  }
+  .tool {
+    margin-top: 8px;
+    height: 32px;
+    a {
+      margin-left: 20px;
+      line-height: 33px;
+      color: #378fd9;
+      font-size: 14px;
+    }
+    input {
+      position: absolute;
+      right: 12px;
+      width: 62px;
+      height: 30px;
+      border: 0;
+      background: url("../imgs/2.png") 0 -79px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+//子导航
+.home {
+  position: relative;
+  width: 381px;
+  height: 34px;
+  line-height: 34px;
+  color: #737373;
+  border-bottom: 1px solid #F1F3F5;
+  .ico {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 18px;
+    height: 14px;
+    background: url("../imgs/sidebar.png");
+    cursor: pointer;
+    div {
+      position: absolute;
+      top: -9px;
+      left: 23px;
+      width: 30px;
+    }
+  }
+  .sign {
+    position: absolute;
+    right: 12px;
+    a {
+      color: #737373;
+    }
+    span {
+      margin: 0 1px;
+    }
+  }
+}
+
+//子页面
+.columns {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .friendlink {
+    padding: 16px 0 8px 12px;
+    li {
+      position: relative;
+      padding-top: 9px;
+      .ico {
+        position: absolute;
+        top: 9px;
+        width: 36px;
+        height: 36px;
+        background: url("../imgs/sidebar.png");
+        cursor: pointer;
+      }
+      .list {
+        margin-left: 56px;
+        .part {
+          color: #3698ec;
+          font-size: 14px;
+          font-weight: 700;
+          span {
+            position: absolute;
+            top: 7px;
+            width: 32px;
+            height: 20px;
+            background: url("../imgs/sidebar.png") -199px -1px;
+          }
+        }
+        .part-on {
+          cursor: pointer;
+        }
+      }
+      .link {
+        margin-top: 7px;
+        a {
+          display: inline-block;
+          margin-right: 9px;
+          height: 34px;
+          line-height: 22px;
+        }
+        .red {
+          color: rgb(228, 78, 78);
+        }
+      }
+    }
+    .hotel {
+      .ico {
+        background-position-x: -26px;
+      }
+    }
+    .cate {
+      .ico {
+        background-position-x: -69px;
+      }
+      span {
+        background-position-x: -235px !important;
+      }
+    }
+    .serve {
+      .ico {
+        background-position-x: -158px;
+      }
+    }
+    .traffic {
+      .ico {
+        background-position-x: -272px;
+      }
+    }
+  }
+  .mobad {
+    margin: 0 0 12px 12px;
+    width: 360px;
+    height: 100px;
+    background: url("../imgs/bar.jpg");
+    border: 0;
+  }
+  .wb, .wx {
+    position: relative;
+    padding: 10px 0 10px 18px;
+    line-height: 22px;
+    .ico {
+      position: absolute;
+      top: 10px;
+      width: 21px;
+      height: 22px;
+      background: url("../imgs/weibo.png");
+      cursor: pointer;
+    }
+    .wx-ico {
+      background-position-x: -21px;
+    }
+    a {
+      margin-left: 30px;
+      font-weight: 700;
+    }
+    b {
+      margin-left: 30px;
+    }
+    .sign {
+      position: absolute;
+      top: 16px;
+      left: 105px;
+      width: 17px;
+      height: 14px;
+      background: url("../imgs/weibo.png") -42px -5px;
+    }
+    .pay {
+      display: inline-block;
+      margin-left: 23px;
+      width: 50px;
+      height: 18px;
+      line-height: 18px;
+      color: #fff;
+      background-color: #ED5127;
+      text-align: center;
+      cursor: pointer;
+    }
+    .wx-pay {
+      margin-left: 3px;
+    }
+  }
+  .ts {
+    padding: 5px 0 0 18px;
+    height: 20px;
+    line-height: 20px;
+    a {
+      color: #3698EC;
+    }
+  }
+}
+
+.infor {
+  width: 371px;
+  height: 500px;
+  overflow-y: auto;
+  .loading {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    span {
+      position: absolute;
+      top: -40px;
+      left: 55px;
+      width: 32px;
+      height: 32px;
+      background: url("../imgs/loading.gif");
+    }
+  }
+  //重新渲染
+  .detail, .transits {
+    position: relative;
+    margin: 10px;
+    padding-left: 10px;
+    min-height: 70px;
+    border: 1px solid #85B6FF;
+    cursor: pointer;
+    h5 {
+      padding-top: 10px;
+      color: #3385ff;
+    }
+    div {
+      padding-top: 10px;
+    }
+    .cost {
+      position: absolute;
+      top: 10px;
+      padding: 1px 3px;
+      height: 17px;
+      border-radius: 3px;
+      background-color: #f55925;
+      color: #fff;
+    }
+    .duration {
+      position: absolute;
+      top: 40px;
+      padding: 1px 3px;
+      height: 17px;
+    }
+    .walking_distance {
+      position: absolute;
+      top: 40px;
+      left: 80px;
+      padding: 1px 3px;
+      height: 17px;
+    }
+    .busline {
+      position: absolute;
+      top: 10px;
+      left: 80px;
+      padding: 1px 3px;
+      height: 17px;
+    }
+    .channel {
+      margin-top: 60px;
+      margin-left: -5px;
+      .way {
+        padding: 5px 10px;
+        border-top: 1px solid #E4E6E7;
+      }
+      .way:hover {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+  .detail:hover {
+    background-color: #f6f6f6;
+  }
+  .indetail {
+    display: none;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    min-height: 90px;
+    background-color: #3385FF;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    .present {
+      width: 220px;
+      word-wrap: break-word;
+      div {
+        margin: 5px 0;
+      }
+    }
+    .come, .out {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      border: 1px solid #85B6FF;
+      text-align: center;
+    }
+    .come {
+      top: 50px;
+    }
+  }
+  .paths {
+    position: relative;
+    margin: 10px;
+    padding-left: 10px;
+    height: 70px;
+    background-color: #bdcbd3;
+    border-radius: 5px;
+    cursor: pointer;
+    .ico {
+      position: absolute;
+      width: 40px;
+      height: 28px;
+      padding: 7px;
+      color: #fff;
+      border-radius: 3px;
+      background-color: #3385ff;
+    }
+    .distance {
+      position: absolute;
+      top: 35px;
+      padding: 5px;
+    }
+    .duration {
+      position: absolute;
+      top: 35px;
+      left: 100px;
+      padding: 5px;
+    }
+    .taxi_cost {
+      position: absolute;
+      top: 35px;
+      left: 230px;
+      padding: 5px;
+    }
+  }
+  .action {
+    margin: 10px;
+    padding-left: 10px;
+    width: 330px;
+    height: 24px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .back {
+    margin-top: 20px;
+    margin-left: 270px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #3385FF;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+//.action {
+//  position: relative;
+//  width: 371px;
+//  height: 500px;
+//  overflow-y: auto;
+//  .way {
+//    padding: 10px;
+//    border-bottom: 1px solid #E4E6E7;
+//  }
+//  .back
+//}
+
+//favorite
+.favorite {
+  padding-left: 5px;
+  height: 152px;
+  border-bottom: 1px dotted rgb(153, 153, 153);
+  h3 {
+    padding: 15px 0;
+  }
+  .lang {
+    height: 55px;
+    span {
+      position: absolute;
+      width: 46px;
+      height: 36px;
+      background: url("../imgs/attention.png") -2px -2px;
+    }
+    p {
+      position: absolute;
+      top: 46px;
+      left: 56px;
+      margin-right: 47px;
+      line-height: 20px;
+    }
+  }
+  input {
+    margin: 10px 21px 0 0;
+    width: 116px;
+    height: 28px;
+    border: 0;
+    background: url("../imgs/attention.png") -54px -2px;
+    cursor: pointer;
+  }
+}
+
+.rain {
+  margin-top: 8px;
+  position: absolute;
+  width: 381px;
+  height: 100%;
+  background: #fff url("../imgs/attunlogin.gif") no-repeat;
+  z-index: 1;
+}

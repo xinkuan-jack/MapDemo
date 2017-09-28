@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geobeans</title>
+    <script src="./lib/MapExpress.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/sammy.js/0.7.6/sammy.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./plugin/cityPicker.css">
+    <script src="./plugin/cityData.js"></script>
+    <script src="./plugin/cityPicker.js"></script>
+</head>
+<body>
+<!--头部-->
+<div class="nav">
+    <!--logo-->
+    <div class="logo">
+        <a href="javascript:;">
+            <h1 title="搜狗地图">搜狗地图</h1>
+        </a>
+    </div>
+    <!--左侧导航-->
+    <div class="nav-left">
+        <a href="http://news.sogou.com/" target="_blank">新闻</a>
+        <a href="https://www.sogou.com/" target="_blank">网页</a>
+        <a href="http://weixin.sogou.com/?kw=" target="_blank">微信</a>
+        <a href="http://zhihu.sogou.com/?p=49351200&kw=" target="_blank">知乎</a>
+        <a href="http://english.sogou.com/" target="_blank" class="new">
+            英文
+            <span/>
+        </a>
+        <b>地图</b>
+        <div class="wrap">
+            <div class="tags tags-left"></div>
+            <div class="list list-left">
+                <a href="http://mingyi.sogou.com/" target="_blank">明医</a>
+                <a href="http://pic.sogou.com/?p=&w=" target="_blank">图片</a>
+                <a href="http://mp3.sogou.com/" target="_blank">音乐</a>
+                <a href="http://v.sogou.com/" target="_blank">视频</a>
+                <a href="http://wenwen.sogou.com/?cid=map2ww" target="_blank">问问</a>
+                <a href="http://gouwu.sogou.com/?p=77031502" target="_blank">购物</a>
+                <a href="http://baike.sogou.com/Home.v" target="_blank">百科</a>
+                <a href="http://www.sogou.com/docs/more.htm" target="_blank">更多</a>
+            </div>
+        </div>
+    </div>
+    <!--右侧导航-->
+    <div class="nav-right">
+        <span>|</span>
+        <a href="http://map.sogou.com/shouji/index.jsp?prod=maps" target="_blank">手机地图</a>
+        <a href="http://map.sogou.com/api/" target="_blank">地图API</a>
+        <a href="http://map.sogou.com/jianyi/?ver=7.0" target="_blank">意见反馈及投诉</a>
+        <div class="wrap-more">
+            <div class="more">
+                更多
+                <div class="tags tags-right"></div>
+            </div>
+            <div class="list list-right">
+                <a href="http://map.sogou.com/info/biaozhu.html#" target="_blank">免费标注介绍</a>
+                <a href="http://map.sogou.com/club/poi/#from=ROOT&c=11944000,4152000,4" target="_blank">标注纠错</a>
+                <a href="http://map.sogou.com/store/#from=ROOT&s=hots" target="_blank">精品</a>
+                <a href="http://map.sogou.com/lushu/#from=ROOT" target="_blank">路书</a>
+                <a href="https://map.sogou.com/info/agreement.html" target="_blank">服务协议</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体-->
+<div class="master">
+    <!--侧边栏-->
+    <div class="sidebar">
+        <!--侧边栏箭头-->
+        <div class="pull">
+            <div></div>
+            <span></span>
+        </div>
+        <!--路由导航-->
+        <ul class="router">
+            <li class="route default under">
+                <a href="#/" id="base">搜&nbsp;索</a>
+                <span></span>
+            </li>
+            <li class="cut"></li>
+            <li class="route"><a href="#/bus">公&nbsp;交</a></li>
+            <li class="cut"></li>
+            <li class="route"><a href="#/driving">自&nbsp;驾</a></li>
+            <li class="cut"></li>
+            <li class="route"><a href="#/favorite">收藏夹</a></li>
+        </ul>
+        <!--渲染页面-->
+        <div class="render">
+            <!--导航渲染-->
+            <div class="service"></div>
+        </div>
+    </div>
+
+    <!--地图-->
+    <div class="geo">
+        <div class="bar">
+            <!--城市选择-->
+            <div class="ctr">
+                <div class="box">
+                    <input type="text" id="cityChoice" class="city" value="北京市">
+                    <input type="hidden" id="city" value="">
+                </div>
+            </div>
+            <!--地图切换-->
+            <div class="over">
+                <div class="default weight">地图</div>
+                <div class="moon">卫星</div>
+                <div>三维</div>
+            </div>
+            <!--测距标记-->
+            <div class="tool">
+                <div class="clear" title="清除标记">
+                    <span></span>
+                </div>
+                <div class="ranging" title="测距">
+                    <span></span>
+                </div>
+                <div class="peg" title="标记">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--路况-->
+        <div class="road">
+            <div class=""></div>
+        </div>
+        <!--定位-->
+        <div class="location glyphicon glyphicon-record"></div>
+        <div class="zoom">
+            <div class="max">
+                <span></span>
+            </div>
+            <div class="min">
+                <span></span>
+            </div>
+        </div>
+        <div id="myMap"></div>
+    </div>
+</div>
+</body>
+</html>
